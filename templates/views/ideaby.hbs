@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+
+    <style>
+        .about {
+            margin-top: 60px;
+        }
+
+        .about hr {
+            width: 75px;
+            height: 6px;
+            background: var(--orange);
+            border: 1px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        main {
+            max-width: 1050px;
+            height: 65vh;
+            background: var(--orange);
+            margin: auto;
+            border-radius: 15px;
+            margin-top: 40px;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+
+        h2 {
+            color: white;
+        }
+
+        main p {
+            line-height: 1.6;
+            color: wheat;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #e16d26;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media only screen and (max-width: 768px) {
+ 
+            main{
+                margin: 40px 10px;
+                padding: 10px;
+                height: auto;
+            }
+        }
+    </style>
+
+
+
+    <title>Letsbunk</title>
+</head>
+
+<body>
+    {{>navbar}}
+    <center class="about">
+        <h1>
+            <hr />
+            idea-by
+        </h1>
+    </center>
+
+    <main>
+          <section>
+            <h2>Welcome to the Idea!</h2>
+            <p>
+                Hi there! I'm Praveer Ranjan Singh, and I'm excited to share my innovative idea with you. The concept is
+                aimed
+                at revolutionizing the way students approach mass bunking. Let's explore the idea together!
+            </p>
+        </section>
+
+        <section>
+            <h2>The Concept</h2>
+            <p>
+                My idea revolves around leveraging technology to optimize the mass bunking experience. From intelligent
+                scheduling algorithms to real-time campus maps, the goal is to empower students with the tools they need
+                to
+                make informed decisions about their attendance.
+            </p>
+        </section>
+
+        <section>
+            <h2>Meet Praveer Ranjan Singh</h2>
+            <p>
+                I am passionate about innovation and the potential of technology to enhance our lives. As a student, I
+                understand the challenges we face, and this idea is my way of contributing to a more efficient and
+                enjoyable
+                college experience.
+            </p>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

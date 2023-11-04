@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+
+    <link rel="stylesheet" href="/css/linkmaker.css">
+    <title>Letsbunk</title>
+</head>
+
+<body>
+    {{>navbar}}
+
+    <center class="link-maker-head">
+        <h1>
+            <hr />
+            Create a mass bunk link
+        </h1>
+    </center>
+
+    <div class="container">
+        <div class="main-container">
+
+
+            <div class="child-div-70">
+                <form method="post" action="/link-maker">
+                    <div class="div-type-1">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="div-type-2">
+                        <div>
+                            <label for="batch">Batch:</label>
+                            <input type="text" id="batch" name="batch" required>
+                        </div>
+                        <div>
+                            <label for="sec">Section:</label>
+                            <input type="text" id="sec" name="sec" required>
+                        </div>
+
+
+
+                    </div>
+                    <div class="div-type-2">
+                        <div>
+                            <label for="period">Period:</label>
+                            <input type="text" id="period" name="period" required>
+                        </div>
+                        <div>
+                            <label for="time">Time:</label>
+                            <input type="text" id="time" name="time" required>
+                        </div>
+
+
+
+
+                    </div>
+                    <div class="div-type-1">
+                        <label for="bunkMessage">Bunk Message:</label>
+                        <textarea id="bunkMessage" name="bunkMessage" rows="4" required></textarea>
+                    </div>
+
+
+
+
+
+
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="child-div-30">
+                <div class="image">
+                    <img src="https://i.postimg.cc/nrKFBkkF/www-rafiki-1.png" alt="url-image">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

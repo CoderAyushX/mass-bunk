@@ -1,0 +1,168 @@
+.link-maker-head {
+  margin-top: 60px;
+}
+
+.link-maker-head hr {
+  width: 75px;
+  height: 6px;
+  background: var(--orange);
+  border: 1px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.main-container {
+  max-width: 1350px;
+  height: 65vh;
+  background: var(--orange);
+  margin: auto;
+  border-radius: 15px;
+  margin-top: 40px;
+  overflow: hidden;
+}
+
+.main-container label {
+  display: block;
+}
+
+.child-div-70 {
+  float: left;
+  width: 70%;
+  padding: 20px;
+  height: 100%;
+  box-sizing: border-box;
+}
+.child-div-70 label{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.child-div-70 .div-type-1 input, .div-type-1 textarea{
+ width: 100%;
+ margin-bottom: 20px;
+}
+.child-div-70 .div-type-2{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.child-div-70 .div-type-2 div{
+    width: 45%;
+}
+.child-div-70 .div-type-2 input {
+    width: 100%;
+}
+
+.div-type-1 input , .div-type-2 input{
+    background:  wheat;
+    height:35px ;
+    border: 2px solid white;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+
+.div-type-1 textarea{
+    background:  wheat;
+    height:100px;
+    border: 2px solid white;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.child-div-70 button{
+background: wheat;
+  border: 1px;
+  height: 45px;
+  width: 135px;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.child-div-30 {
+  float: left;
+  width: 30%;
+  padding: 20px;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.child-div-30 .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+
+.link-box{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.link-box .link{
+   padding: 20px;
+   background:wheat;
+   color: black;
+   border-radius: 8px;
+   font-weight: 600;
+ 
+}
+.link-box button{
+    background: wheat;
+  border: 1px;
+  height: 45px;
+  width: 135px;
+  border-radius: 5px;
+  font-weight: 500;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.link-box img{
+    width: 300px;
+    height: 300px;
+}
+
+@media only screen and (max-width: 768px) {
+
+ 
+  
+
+  
+  .main-container {
+    margin: 40px 10px;
+  
+    height: auto;
+  }
+  
+
+  
+  .child-div-70 {
+  
+    width: 100%;
+    padding: 30px 10px;
+  
+  }
+ 
+  
+  
+  
+ 
+  .child-div-30 {
+    display: none;
+  }
+  .link-box{
+    padding: 30px 10px;
+}
+
+  
+}

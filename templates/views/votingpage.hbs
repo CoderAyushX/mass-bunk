@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/voting.css">
+    <link rel="stylesheet" href="/css/linkmaker.css">
+    <title>Letsbunk</title>
+</head>
+
+<body>
+    {{>navbar}}
+
+    <center class="link-maker-head">
+        <h1>
+            <hr />
+            Vote for mass bunk
+        </h1>
+    </center>
+
+    <div class="container">
+        <div class="main-container">
+
+            <div class="child-div-60">
+                <div class="box">
+                    <div class="up-down-vote-box">
+                        <div>
+                            <p id="upvote">
+                                {{formDetails.agreeCount}}
+                            </p>
+                        </div>
+                        <div>
+                            <p id="downvote">
+                                {{formDetails.disagreeCount}}
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="button-box" id="vote-buttons">
+                        Your vote: <br>
+                        <button onclick="vote('upvote')" id="up">Upvote</button>
+                        <button onclick="vote('downvote')" id="down">Downvote</button>
+                    </div>
+
+                </div>
+                <div class="box">
+                    <div class="cdm-boxes">
+                        Creator: <span>{{formDetails.name}}</span>
+                    </div>
+                    <div class="cdm-boxes">
+                        Details: <br>
+                        <span>{{formDetails.batch}} "{{formDetails.sec}}", bunk time {{formDetails.time}} in
+                            {{formDetails.period}} period</span>
+                    </div>
+                    <div class="cdm-boxes">
+                        Message: <br>
+                        <span>
+                            {{formDetails.bunkMessage}}
+                        </span>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+            <div class="child-div-40">
+                <div class="image">
+                    <img src="https://i.postimg.cc/nV6drpw6/Bingo-rafiki-1.png" alt="url-image">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+    <script>
+        function getSlugFromUrl() {
+            const urlParts = window.location.pathname.split('/');
+            return urlParts[urlParts.length - 1];
+        }
+
+        const slug = getSlugFromUrl();
+        console.log(slug)
+
+        function vote(type) {
+
+            let up = document.getElementById("up");
+            let down = document.getElementById("down");
+
+            // Disable the button
+            up.disabled = true;
+            down.disabled = true;
+
+            // Optionally, you can add some visual indication
+            up.style.opacity = 0.8;
+
+            down.style.opacity = 0.8;
+
+            const hasVoted = localStorage.getItem(`vote_${slug}`);
+            if (hasVoted) {
+                alert('You have already voted');
+                return;
+            }
+
+            fetch(`/bunklink/${slug}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ type }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    const voteType = type === 'upvote' ? 'upvote' : 'downvote';
+                    document.getElementById(`${voteType}`).innerHTML = parseInt(document.getElementById(`${voteType}`).innerHTML) + 1;
+
+                    localStorage.setItem(`vote_${slug}`, type);
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+
+</html>

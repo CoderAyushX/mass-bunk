@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+
+    <style>
+        .about {
+            margin-top: 60px;
+        }
+
+        .about hr {
+            width: 75px;
+            height: 6px;
+            background: var(--orange);
+            border: 1px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        main {
+            max-width: 1050px;
+            height: 65vh;
+            background: var(--orange);
+            margin: auto;
+            border-radius: 15px;
+            margin-top: 40px;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+
+        h2 {
+            color: white;
+        }
+
+        main p {
+            line-height: 1.6;
+            color: wheat;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #e16d26;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media only screen and (max-width: 768px) {
+ 
+            main{
+                margin: 40px 10px;
+                padding: 10px;
+                height: auto;
+            }
+        }
+    </style>
+
+
+
+    <title>Letsbunk</title>
+</head>
+
+<body>
+    {{>navbar}}
+    <center class="about">
+        <h1>
+            <hr />
+            About us
+        </h1>
+    </center>
+
+    <main>
+        <section>
+            <h2>Welcome to College Mass Bunk!</h2>
+            <p>
+                Hi there! I'm Ayush Kumar, a BCA student at Amity University Jharkhand. College Mass Bunk is a fun
+                platform
+                where we share tips and tricks for mastering the art of mass bunking. It's not just about skipping
+                classes;
+                it's about strategic planning and making the most of your college days.
+            </p>
+        </section>
+
+        <section>
+            <h2>Our Mission</h2>
+            <p>
+                At College Mass Bunk, our mission is to provide students with creative ideas and techniques for
+                successfully
+                executing mass bunks. We believe in the importance of balance, and sometimes that means taking a break
+                from
+                the routine to create lasting memories with friends.
+            </p>
+        </section>
+
+        <section>
+            <h2>Meet Ayush Kumar</h2>
+            <p>
+                I'm passionate about technology, coding, and, of course, mastering the art of mass bunking. As a BCA
+                student, I
+                understand the challenges and pressures that come with academic life, and I'm here to help you navigate
+                through
+                it with a touch of humor and creativity.
+            </p>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

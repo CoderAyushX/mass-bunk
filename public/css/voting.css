@@ -1,0 +1,100 @@
+.main-container .child-div-60{
+    float: left;
+    width: 60%;
+    padding: 20px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.main-container .child-div-60 .box:nth-child(2){
+    background: rgb(228, 135, 76);
+    padding: 10px;
+    border-radius: 8px;
+
+}
+
+.main-container .child-div-40{
+    float: left;
+    width: 40%;
+    padding: 20px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.child-div-40 .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+.main-container .child-div-60 .cdm-boxes{
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.main-container .child-div-60 .cdm-boxes span{
+    font-size: 16px;
+    font-weight: 500;
+    color: wheat;
+}
+
+.up-down-vote-box{
+    display: flex;
+}
+
+.up-down-vote-box div{
+    width: 80px;
+    height: 80px;
+    border: 10px solid;
+    border-radius: 100%;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    background: wheat;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.up-down-vote-box div:nth-child(1){
+    border-color: rgb(27, 197, 27);
+    color: rgb(27, 197, 27);
+    margin-right: 50px;
+
+}
+
+.up-down-vote-box div:nth-child(2){
+    border-color: rgb(212, 10, 10);
+    color: rgb(212, 10, 10);
+ 
+}
+
+.main-container .child-div-60 .button-box{
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.main-container .child-div-60 .button-box button{
+  border: 1px;
+  height: 45px;
+  width: 135px;
+  border-radius: 5px;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-bottom: 40px;
+}
+
+.main-container .child-div-60 .button-box button:nth-child(2){
+    background: rgb(27, 197, 27);
+    color: #fff;
+    cursor: pointer;
+}
+
+.main-container .child-div-60 .button-box button:nth-child(3){
+    background: rgb(212, 10, 10);
+    color: #fff;
+    cursor: pointer;
+}
